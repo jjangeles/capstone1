@@ -4,6 +4,8 @@
 	box-sizing: border-box;
 }
 
+/*https://coolors.co/0e0e1e-f4a261-e76f51-2a9d8f-c6c6c6*/
+
 .jumbotron hr {
 	/*background-color: #fff;*/
 }
@@ -43,8 +45,17 @@
 	border: 1px solid black;
 }
 
+.dark-bg {
+	background-color: #0E0E1E;
+}
+
 .border-radius {
 	border-radius: 5px;
+}
+
+.logo {
+	width: 50px;
+	height: 50px;
 }
 
 .navbar-nav .active {
@@ -70,7 +81,8 @@
 }
 
 .footer {
-	height: 5vh;
+	height: 35px;
+	color: white;
 }
 
 .rss-desktop {
