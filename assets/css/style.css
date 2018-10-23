@@ -1,0 +1,149 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.jumbotron hr {
+	/*background-color: #fff;*/
+}
+
+#jumbo-land {
+	padding-top: 5%;
+	height: 100vh;
+	/*background-color: #333;*/
+	border-radius: 0;
+	background-image: url(../images/landing-bg.jpg);
+	background-size: cover;
+}
+
+.btn {
+	display: block;
+	margin: 0 auto;
+	color: black;
+	border: 2px solid black;
+}
+
+.btn:hover {
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+
+.btn a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/*-----------------------------HomePage------------------------------*/
+
+[class*="col-"],
+.home-bottom,
+.footer {
+	border: 1px solid black;
+}
+
+.border-radius {
+	border-radius: 5px;
+}
+
+.navbar-nav .active {
+	background-color: grey;
+}
+
+.nav-item {
+	min-width: 90px;
+}
+
+.clear:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.main {
+	height: 60vh;
+}
+
+.home-bottom {
+	height: 28vh;
+}
+
+.footer {
+	height: 5vh;
+}
+
+.rss-desktop {
+	overflow: hidden;
+}
+
+.rss-mobile {
+	display: none;
+}
+
+.carousel-inner {
+	height: 60vh;
+}
+
+.carousel-caption {
+	background-color: rgba(0, 0, 0, 0.5);
+	top: 0;
+	bottom: auto;
+	border-radius: 0 0 20px 20px; 
+}
+
+.rss-desktop > script {
+	background-color: blue;
+}
+
+/*----------------------------Tablet-----------------------------*/
+
+
+@media only screen and (max-width: 960px) and (min-width: 451px) {
+
+	.rss-desktop {
+		display: none;
+	}
+
+	.rss-mobile {
+		display: block;
+		height: 200px;
+		min-height: 200px;
+		overflow: hidden;
+	}
+
+	.carousel-inner {
+		height: 40vh;
+	}
+
+	.main {
+		height: auto;
+	}
+
+	.test {
+		height: 200px;
+		width: 300px;
+	}
+}
+
+/*------------------------------Mobile---------------------------*/
+
+@media only screen and (max-width: 450px) {
+
+	.rss-mobile {
+		display: block;
+	}
+
+	.rss-desktop {
+		display: none;
+	}
+
+	.carousel-inner {
+		height: 30vh;
+	}
+
+	.main {
+		height: auto;
+	}
+
+}
