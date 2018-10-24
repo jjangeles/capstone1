@@ -23,10 +23,8 @@
 	<!-- external CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-
-
 </head>
-<body id="home">
+<body id="home" onload="showManila()">
 
 	<nav id="navbar" class="navbar navbar-expand-lg navbar-dark dark-bg sticky-top">
 			
@@ -219,51 +217,102 @@
 
 			</div> <!-- mobile rss feed -->
 
-			<!-- weather widget -->
-			<div id="weather" class="col-md-6 col-lg-12 mt-3">
-
+			<div class="col-12 col-md-12 col-lg-12 mt-5">
 				<h2 class="text-center">7 Day Weather forecast</h2>
+				<h5 class="text-center">Check weather on popular surf spots!</h5>
+
+				<div class="dropdown">
+				  	<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    Select Location
+				  	</button>
+				  	
+				  	<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+				    	<button class="dropdown-item active" type="button" onclick="showManila()">Manila</button>
+				    	<button class="dropdown-item" type="button" onclick="showReal()">Real, Quezon</button>
+				    	<button class="dropdown-item" type="button" onclick="showBaler()">Baler, Aurora</button>
+				    	<button class="dropdown-item" type="button" onclick="showZambales()">San Antonio, Zambales</button>
+				    	<button class="dropdown-item" type="button" onclick="showLaUnion()">San Juan, La Union</button>
+				    	<button class="dropdown-item" type="button" onclick="showSiargao()">Siargao, Surigao Del Norte</button>
+				  	</div>
+				</div>
+
+			</div> <!-- end select location -->
+			
+
+			<!-- weather widget -->
+			<div id="weather-manila" class="col-md-6 col-lg-12 mt-3 weather-loc">
 
 				<a class="weatherwidget-io" href="https://forecast7.com/en/14d60120d98/manila/" data-label_1="MANILA" data-label_2="WEATHER" data-theme="dark" data-basecolor="#0E0E1E" data-suncolor="#E76F51" >MANILA WEATHER</a>
 				<script>
 				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 				</script>
-			</div> <!-- end weather widget -->
+			</div> <!-- end weather manila widget -->
+
+			<div id="weather-real" class="col-md-6 col-lg-12 mt-3 weather-loc">
+				<a class="weatherwidget-io" href="https://forecast7.com/en/14d55121d56/real/" data-label_1="REAL" data-label_2="WEATHER" data-theme="original" data-basecolor="#0E0E1E" data-suncolor="#E76F51" >REAL WEATHER</a>
+				<script>
+				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+				</script>
+			</div> <!-- end real -->
+			
+			<div id="weather-baler" class="col-md6 col-lg-12 mt-3 weather-loc">
+				<a class="weatherwidget-io" href="https://forecast7.com/en/15d73121d57/baler/" data-label_1="BALER" data-label_2="WEATHER" data-theme="original" data-basecolor="#0E0E1E" data-suncolor="#E76F51" >BALER WEATHER</a>
+				<script>
+				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+				</script>
+			</div> <!-- end baler -->
+
+			<div id="weather-zambales" class="col-md6 col-lg-12 mt-3 weather-loc">
+				<a class="weatherwidget-io" href="https://forecast7.com/en/14d93120d09/san-antonio/" data-label_1="SAN ANTONIO" data-label_2="WEATHER" data-theme="original" data-basecolor="#0E0E1E" data-suncolor="#E76F51" >SAN ANTONIO WEATHER</a>
+				<script>
+				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+				</script>
+			</div> <!-- end zambales -->
+
+			<div id="weather-launion" class="col-md6 col-lg-12 mt-3 weather-loc">
+				<a class="weatherwidget-io" href="https://forecast7.com/en/16d67120d36/san-juan/" data-label_1="SAN JUAN" data-label_2="WEATHER" data-theme="original" data-basecolor="#0E0E1E" data-suncolor="#E76F51" >SAN JUAN WEATHER</a>
+				<script>
+				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+				</script>
+			</div> <!-- end La Union -->
+
+			<div id="weather-siargao" class="col-md6 col-lg-12 mt-3 weather-loc">
+				<a class="weatherwidget-io" href="https://forecast7.com/en/9d75126d07/dapa/" data-label_1="SIARGAO" data-label_2="WEATHER" data-theme="original" data-basecolor="#0E0E1E" data-suncolor="#E76F51" >SIARGAO WEATHER</a>
+				<script>
+				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+				</script>
+			</div> <!-- end siargao -->
 
 			<div class="col-12 col-lg-12 mt-3">
 				<h2>The surfing season is here!</h2> 
 				<p class="lead">If you are serious about surfing and want to be ready for that first session, find out what you need to know in the run up to arriving at the beach. The better you prepare, the more fun you will have: you'll be fit and ready, have the right gear and be at the right place. Check out these cool surfing tutorial videos and share them to your friends. You just might help them discover their love for surfing.</p>
 			</div>
 
+			
+
 			<!-- video carousel -->
 
 			<div id="carousel-controls1" class="carousel slide col-lg-12" data-ride="carousel" data-interval="false">
-
-				<!-- <ol class="carousel-indicators">
-					<li data-target="#carousel-controls1" data-slide-to="0" class="active"></li>
-					<li data-target="#carousel-controls1" data-slide-to="1"></li>
-					<li data-target="#carousel-controls1" data-slide-to="2"></li>
-				</ol> -->
 
 				<div class="carousel-inner-vid">
 
 						<div class="carousel-item active">
 							<div class="row vid-row">
 
-								<div class="col-lg-2 offset-lg-2">
-									<iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/KCLWvAcPcPk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								<div class="col-lg-2 offset-lg-2 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/k_Vd9SYg4wI" data-target="#modal-1">
+									<img class="d-block w-100" src="assets/images/catch.jpg">
 								</div>
 								
-								<div class="col-lg-2">
-									<iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/k_Vd9SYg4wI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								<div class="col-lg-2 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/KCLWvAcPcPk" data-target="#modal-1"">
+									<img class="d-block w-100" src="assets/images/take-off.jpg">
 								</div>
 
-								<div class="col-lg-2">
-									<iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/XCaiQYVEut4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								<div class="col-lg-2 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/ipmlL7Hjhdg" data-target="#modal-1"">
+									<img class="d-block w-100" src="assets/images/speed.jpg">
 								</div>
 
-								<div class="col-lg-2">
-									<iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/3M7Ko0ZxIh0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								<div class="col-lg-2 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/3M7Ko0ZxIh0" data-target="#modal-1"">
+									<img class="d-block w-100" src="assets/images/paddle.jpg">
 								</div>
 
 							</div> <!-- end carousel row -->
@@ -273,20 +322,20 @@
 						<div class="carousel-item">
 							<div class="row vid-row">
 								
-								<div class="col-12 col-lg-2 offset-lg-2">
-									<iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/mKtbmZvHCm4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								<div class="col-12 col-lg-2 offset-lg-2 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/mKtbmZvHCm4" data-target="#modal-1"">
+									<img class="d-block w-100" src="assets/images/draw.jpg">
 								</div>
 								
-								<div class="col-12 col-lg-2">
-									<iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/3M7Ko0ZxIh0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								<div class="col-12 col-lg-2 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/XCaiQYVEut4" data-target="#modal-1"">
+									<img class="d-block w-100" src="assets/images/etiquette.jpg">
 								</div>
 
-								<div class="col-12 col-lg-2">
-									<iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/XCaiQYVEut4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								<div class="col-12 col-lg-2 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/k_Vd9SYg4wI" data-target="#modal-1"">
+									<img class="d-block w-100" src="assets/images/catch.jpg">
 								</div>
 
-								<div class="col-12 col-lg-2">
-									<iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/ipmlL7Hjhdg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								<div class="col-12 col-lg-2 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/KCLWvAcPcPk" data-target="#modal-1"">
+									<img class="d-block w-100" src="assets/images/take-off.jpg">
 								</div>
 
 							</div> <!-- end carousel row -->
@@ -307,6 +356,29 @@
 				</div> <!-- end carousel inner -->
 
 			</div> <!-- end video carousel -->
+
+			<div class="modal fade" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  	<div class="modal-dialog" role="document">
+			    	<div class="modal-content">
+
+						<div class="modal-body">
+
+			       			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          			<span aria-hidden="true">&times;</span>
+			        		</button>  
+
+			        		<!-- 16:9 aspect ratio -->
+							<div class="embed-responsive embed-responsive-16by9">
+			  					<iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always">></iframe>
+							</div>
+
+				        </div> <!-- end modal body -->
+
+			    	</div><!-- end modal content -->
+
+			  	</div> <!-- end modal dialog -->
+
+			</div> <!-- end modal -->
 
 			<div class="row subfooter pl-3 mt-3">
 				
@@ -347,35 +419,99 @@
 <!-- external bootstrap js -->
 <script src="assets/js/bootstrap.min.js"></script>
 
+<!-- play and youtube embed on modal js -->
+<script type="text/javascript">
+
+		$(document).ready(function() {
+
+		// Gets the video src from the data-src on each button
+
+		var $videoSrc;  
+		$('.video-btn').click(function() {
+		    $videoSrc = $(this).data( "src" );
+		});
+		console.log($videoSrc);
+		  
+		// when the modal is opened autoplay it  
+		$('#modal-1').on('shown.bs.modal', function (e) {
+		    
+		// set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+		$("#video").attr('src',$videoSrc + "?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1" ); 
+		})
+		  
+		  
+		// stop playing the youtube video when I close the modal
+		$('#modal-1').on('hide.bs.modal', function (e) {
+		    // a poor man's stop video
+		    $("#video").attr('src',$videoSrc); 
+		}) 
+
+		// document ready  
+		});
+	</script>
+
+<script type="text/javascript">
+	function showManila(){
+
+		var elems = document.getElementsByClassName('weather-loc');
+		for (var i=0;i<elems.length;i+=1){
+		  	elems[i].style.display = 'none';
+		}
+
+	  	document.getElementById('weather-manila').style.display ='block';
+	}
+
+	function showReal(){
+
+		var elems = document.getElementsByClassName('weather-loc');
+		for (var i=0;i<elems.length;i+=1){
+		  	elems[i].style.display = 'none';
+		}
+
+	  	document.getElementById('weather-real').style.display ='block';
+	}
+
+	function showBaler(){
+
+		var elems = document.getElementsByClassName('weather-loc');
+		for (var i=0;i<elems.length;i+=1){
+		  	elems[i].style.display = 'none';
+		}
+
+	  	document.getElementById('weather-baler').style.display ='block';
+	}
+
+	function showZambales(){
+
+		var elems = document.getElementsByClassName('weather-loc');
+		for (var i=0;i<elems.length;i+=1){
+		  	elems[i].style.display = 'none';
+		}
+
+	  	document.getElementById('weather-zambales').style.display ='block';
+	}
+
+	function showLaUnion(){
+
+		var elems = document.getElementsByClassName('weather-loc');
+		for (var i=0;i<elems.length;i+=1){
+		  	elems[i].style.display = 'none';
+		}
+
+	  	document.getElementById('weather-launion').style.display ='block';
+	}
+
+	function showSiargao(){
+
+		var elems = document.getElementsByClassName('weather-loc');
+		for (var i=0;i<elems.length;i+=1){
+		  	elems[i].style.display = 'none';
+		}
+
+	  	document.getElementById('weather-siargao').style.display ='block';
+	}
+</script>
+
 </body>
 </html>
-
-
-<!-- modal -->
-<!-- 								<div id="modal-1" class="modal fade" tabindex="-1">
-									<div class="modal-dialog" role="document">
-										<div class="modal-content">
-											
-											<div class="modal-header">
-
-												<h5 class="modal-title">test</h5>
-
-												<button type="button" class="close" data-dismiss="modal">
-													<span aria-hidden="true"> &times; </span>
-												</button>
-
-											</div> 
-
-											<div class="modal-body">
-												<iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/KCLWvAcPcPk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-											</div> 
-
-											<div class="modal-footer">
-												<button class="btn btn-danger" data-dismiss="modal">Close</button>
-											</div>
-
-										</div> 
-
-									</div>
-
-								</div>  -->
+								

@@ -102,7 +102,7 @@
 
 .surfingwaves {
 	text-align: right;
-	width: 390px;
+	width: 100%;
 }
 
 .surfingwaves2 {
@@ -208,6 +208,30 @@ iframe {
 	color: #ff0000;
 }
 
+/*modal*/
+
+.modal-dialog {
+      max-width: 800px;
+      margin: 30px auto;
+ }
+
+
+
+.modal-body {
+  position:relative;
+  padding:0px;
+}
+.close {
+  position:absolute;
+  right:-30px;
+  top:0;
+  z-index:999;
+  font-size:2rem;
+  font-weight: normal;
+  color:#fff;
+  opacity:1;
+}
+
 /*--------------------------------Desktop------------------------*/
 
 @media only screen and (min-width: 960px){
@@ -260,9 +284,11 @@ iframe {
 		width: 300px;
 	}
 
-	#weather {
-		height: 30vh
+	#weather-manila,
+	#weather-real {
+		height: 30vh;
 	}
+
 }
 
 /*------------------------------Mobile---------------------------*/
