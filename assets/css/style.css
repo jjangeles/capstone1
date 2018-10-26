@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
 }
 
 html {
@@ -48,17 +49,37 @@ html {
 	border: 1px solid black;
 }*/
 
+#load {
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(22, 21, 23, .8);
+	position: fixed;
+	z-index: 5;
+}
+
+#loading-gif {
+	position: absolute;
+	width: 130px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 .home {
 	background-color: #C6C6C6;
 }
 
-.navbar-brand {
+#navbar .navbar-brand {
 	font-family: 'Patua One', cursive;
 	font-size: 	40px;
+	color: #0E0E1E;
+	background-color: white;
+	border-radius: 10px;
 }
 
 .navbar {
 	box-shadow: 0 5px 20px black;
+	z-index: 2;
 }
 
 .dark-bg {
@@ -70,9 +91,10 @@ html {
 }
 
 .logo {
-
-	width: 50px;
+	width: 80px;
 	height: 50px;
+	position: relative;
+	top: -5px;
 }
 
 .navbar-nav .active {
@@ -118,12 +140,12 @@ html {
 	font-size: 15px;
 }
 
-.rss-mobile {
-	display: none;
+.carousel-indicators {
+	z-index: 1;
 }
 
 #carousel-controls1 {
-	overflow: hidden
+	overflow: hidden;
 }
 
 #carousel-controls2 {
@@ -136,7 +158,17 @@ html {
 }
 
 .carousel-inner-vid {
-	height: 15vh;
+	height: auto;
+}
+
+.carousel-inner > .carousel-item {
+  width: 100%;
+  margin: auto;
+  min-height:initial;
+}
+
+.vid-row {
+	height: auto;
 }
 
 .carousel-caption {
@@ -174,11 +206,23 @@ html {
   color: #0E0E1E;
 }
 
-.vid-row {
-	height: 15vh;
+.video-btn {
+	margin-top: 10px;
 }
 
-.embed-responsive:active {
+.brands {
+	text-align: center;
+}
+
+.brands img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 70%;
+}
+
+/*.embed-responsive:active {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -190,12 +234,16 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+}*/
 
 iframe {
   /* optional */
   width: 100%;
   height: 100%; 
+}
+
+.subfooter {
+	position: relative;
 }
 
 .subfooter [class*="col-"] {
@@ -207,11 +255,11 @@ iframe {
 
 .social-links {
 	font-size: 40px;
-	padding: 0;
 }
 
 .social-links i {
 	padding: 10px;
+	color: white;
 }
 
 .fa-facebook:hover {
@@ -276,42 +324,103 @@ iframe {
 	border-top: 1px solid black;
 }
 
-@keyframes example {
+@keyframes pointup {
     0%   {left:0px; top:0px;}
     40%  {left:0px; top:-50px;}
     100% {left:0px; top:0px;}
 }
 
-.back-to-top {
+#buttoncontainer {
+	position: fixed;
+	bottom: 20%;
+	right: 5%;
+	display: none;
+}
+
+#back-to-top {
 	width: 40px;
-	position: relative;
-	animation-name: example;
+	display: block;
+	margin: 0 auto;
+	position:relative;
+	animation-name: pointup;
     animation-duration: 1s;
     animation-iteration-count: infinite;
 }
 
 /*------------------------------Contact--------------------------*/
 
+#message {
+	height: 150px;
+	resize: none;
+}
+
 .google-map {
-	height: 50vh;
+	height: 40vh;
+}
+
+.form-group.required .control-label:after {
+  content:"*";
+  color:red;
+}
+
+/*----------------------------About----------------------------*/
+
+#about .mission {
+	height: 94vh;
+	background-image: url("../images/about-bg.jpg");
+	background-size: cover;
+	position: relative;
+	background-position: center;
+	/*background-attachment: fixed;*/
+}
+
+#about .vision {
+	height: 95vh;
+	background-image: url("../images/about-bg2.jpg");
+	background-size: cover;
+	position: relative;
+	background-position: center;
+	/*background-attachment: fixed;*/
+}
+
+#about .container-fluid {
+	position: relative;
+	top: -100px;
+}
+
+#about .subfooter {
+	position: relative;
+	top: 100px;
+}
+
+#about #navbar {
+	margin-top: 20px;
+	height: 75px;
+	background-color: transparent;
+	box-shadow: none;
+}
+
+#mission-content {
+	color: white;
+	position: absolute;
+	bottom: 5%;
 }
 
 /*--------------------------------Desktop------------------------*/
 
 @media only screen and (min-width: 960px){
 
-	/*#carousel-controls1 {
-		margin-left: 50px;
-		margin-right: 50px;
+	.rss-mobile {
+		display: none;
 	}
 
-	.carousel-control.prev1 {
-		margin-left: -25px;
+	.carousel-inner-vid {
+		/*max-height: 150px;*/
 	}
 
-	.carousel-control.next1 {
-		margin-right: -25px;
-	}*/
+	.vid-row {
+		/*min-height: 200px;*/
+	}
 
 }
 
@@ -319,6 +428,10 @@ iframe {
 
 
 @media only screen and (max-width: 960px) and (min-width: 451px) {
+
+	.load {
+		display: none;
+	}
 
 	.carousel-inner {
 		height: 45vh;
@@ -344,12 +457,9 @@ iframe {
 		display: block;
 	}
 
-	/*.carousel-inner {
+	.carousel-inner {
 		height: 40vh;
-	}*/
-
-	.carousel-inner-vid {
-		height: 35vh;
+		width: 98%;
 	}
 
 	.main {
@@ -376,19 +486,46 @@ iframe {
 		height: 18vh;
 	}
 
+	#mission-content {
+		background-color: rgba(22, 21, 23, .4);
+		border-radius: 5px;
+		height: auto;
+	}
+	
+	#vision-content .container {
+		background-color: rgba(249, 249, 249, .4);
+		border-radius: 5px;
+		height: auto;
+	}
+
 }
 
 /*------------------------------Mobile---------------------------*/
 
 @media only screen and (max-width: 450px) {
 
-	.rss-mobile {
-		display: block;
+	.load {
+		display: none;
+	}
+
+	#navbar .navbar-brand {
+		margin: 0;
+		width: 80%;
+		font-size: 32px;
+	}
+
+	.navbar-toggler {
+		padding-left: 0;
+		padding-right: 0;
 	}
 
 	.rss-desktop {
-		display: none;
+		margin-top: 10px;
+		/*display: block;*/
+		height: 50vh;
 	}
+
+
 
 	#carousel-controls2 {
 		display: block;
@@ -399,7 +536,8 @@ iframe {
 	}
 
 	.carousel-inner {
-		height: 40vh;
+		height: 30vh;
+		width: 95%;
 	}
 
 	.carousel-inner-vid {
@@ -416,6 +554,18 @@ iframe {
 
 	.social-links {
 		height: 25vh;
+	}
+
+	#mission-content {
+		background-color: rgba(22, 21, 23, .4);
+		border-radius: 5px;
+		height: auto;
+	}
+	
+	#vision-content .container {
+		background-color: rgba(249, 249, 249, .4);
+		border-radius: 5px;
+		height: auto;
 	}
 
 }

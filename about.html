@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+	<meta http-equiv="X-UA-Compatible" content="IE-Edge">
+
+	<title>TideHunter | About Us</title>	 
+
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+	<!-- Google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Patua+One|Raleway" rel="stylesheet">
+
+	<!-- bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	<!-- animate CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+
+	<!-- external CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body id="about">
+
+	<nav id="navbar" class="col-12 navbar navbar-expand-lg navbar-dark dark-bg sticky-top">
+			
+		<a class="navbar-brand pr-3 py-0 ml-3" href="home.html"><img class="logo" src="assets/images/logo.png">TideHunter</a>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div id="navbar-nav" class="collapse navbar-collapse">
+			<ul id="navbar-list" class="navbar-nav ml-auto">
+				
+				<li class="nav-item">
+					<a href="home.html" class="nav-link text-center mx-2 border-radius">Home</a>
+				</li>
+	
+				<li class="nav-item">
+					<a href="blogs.html" class="nav-link text-center mx-2 border-radius">Blogs</a>
+				</li>
+				
+				<li class="nav-item"> 
+					<a href="about.html" class="nav-link text-center mx-2 active border-radius">About Us</a>
+				</li>
+
+				<li class="nav-item">
+					<a href="contact.html" class="nav-link text-center mx-2 border-radius">Contact Us</a>
+				</li>
+
+			</ul>				
+		</div> <!-- end navbar items -->
+
+	</nav> <!-- end navbar -->
+
+	<div class="container-fluid">
+
+		<div class="row mission mt-4 mx-2">
+
+			<div id="mission-content" class="col-12">
+
+				<h1>Mission</h1>
+
+				<p>TideHunter's goal is to connect people with the ocean. Starting with surfers and since expanding to offshore cruisers, fishermen and a myriad of other ocean-goers, we've found ways to deliver the peak ocean experience. It is our mission to provide the most accurate forecast data and eye-popping content in order to make your life better, whatever your ocean pursuit may be.</p>
+
+			</div>
+			
+
+		</div> <!-- end mission -->
+
+		<div class="row vision mx-2 mt-5">
+
+			<div id="vision-content" class="col-md-6 offset-md-6 mt-5 text-right">
+
+				<div class="container">
+					
+					<h1 class="mt-5">Vision</h1>
+
+					<p>TideHunter's goal is to connect people with the ocean. Starting with surfers and since expanding to offshore cruisers, fishermen and a myriad of other ocean-goers, we've found ways to deliver the peak ocean experience. It is our mission to provide the most accurate forecast data and eye-popping content in order to make your life better, whatever your ocean pursuit may be.</p>
+					
+				</div>
+				
+			</div>
+
+		</div>
+
+
+		<div class="row subfooter pb-3">
+				
+			<div class="col-12 col-lg-8 pt-3">
+
+				<div class="container-fluid">
+
+				</div>
+
+				<small><strong>For Educational and Informational Purposes Only.</strong> The information contained in this website, blog, guest blogs, e-mails, videos, programs, services and/or products is for educational and informational purposes only. </small>
+
+			</div>
+
+			<div class="col-12 col-lg-4 social-links">
+
+				<h4 class="mt-3 ml-3">Follow us at:</h4>
+				<a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+				<a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+				<a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+				<a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+
+			</div>
+
+		</div>	<!-- end subfooter -->
+
+	</div> <!-- end container fluid -->
+
+
+<div class="footer fixed-bottom dark-bg">
+			
+	<p class="text-center mt-1"><small>John Jerome Angeles | &copy; 2018 Tuitt Coding Bootcamp</small></p>
+
+</div> <!-- end footer -->
+
+
+<!-- jquery first then popper then bootstrap js -->
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+<!-- external bootstrap js -->
+<script src="assets/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(window).scroll(function() {
+	   var offset =$("#navbar").offset();
+	   if (offset.top > 27) {
+	       	$('#navbar').css("background-color", "#0E0E1E");
+	       	$('#navbar').css("box-shadow", "0 5px 20px black");
+	       	$('#navbar-list').css("background-color", "#0E0E1E");
+	   } else {
+	   		$('#navbar').css("background-color", "transparent");
+	   		$('#navbar').css("box-shadow", "none");
+	   		$('#navbar-list').css("background-color", "transparent");
+	   }
+	});
+
+</script> <!-- navbar effect jquery -->
+
+</body>
+</html>

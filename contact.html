@@ -7,13 +7,13 @@
 
 	<meta http-equiv="X-UA-Compatible" content="IE-Edge">
 
-	<title>Capstone 1 | Home Page</title>	 
+	<title>TideHunter | Contact Us</title>	 
 
 	<!-- FontAwesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
 	<!-- Google fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Patua+One|Raleway" rel="stylesheet">
 
 	<!-- bootstrap CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -27,90 +27,158 @@
 </head>
 <body id="contact">
 
-<nav id="navbar" class="navbar navbar-expand-lg navbar-dark dark-bg sticky-top">
+	<nav id="navbar" class="navbar navbar-expand-lg navbar-dark dark-bg sticky-top">
+			
+		<a class="navbar-brand pr-3 py-0" href="home.html"><img class="logo" src="assets/images/logo.png">TideHunter</a>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div id="navbar-nav" class="collapse navbar-collapse">
+			<ul class="navbar-nav ml-auto">
+				
+				<li class="nav-item">
+					<a href="home.html" class="nav-link text-center mx-2 border-radius">Home</a>
+				</li>
+	
+				<li class="nav-item">
+					<a href="blogs.html" class="nav-link text-center mx-2 border-radius">Blogs</a>
+				</li>
+				
+				<li class="nav-item">
+					<a href="about.html" class="nav-link text-center mx-2 border-radius">About Us</a>
+				</li>
+
+				<li class="nav-item">
+					<a href="contact.html" class="nav-link text-center active mx-2 border-radius">Contact Us</a>
+				</li>
+
+			</ul>				
+		</div> <!-- end navbar items -->
+
+	</nav> <!-- end navbar -->
+
+	<div class="container-fluid">
 		
-	<a class="navbar-brand" href="home.html"><img class="logo" src="assets/images/logo.png">TideHunter</a>
+		<div class="row mb-3">
+				
+			<header class="col-12">
+				<h2 class="text-center py-3">Send us your thoughts!</h2>	
+			</header>
 
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav">
-		<span class="navbar-toggler-icon"></span>
-	</button>
+			<div class="col-12 col-md-5">
+				
+				<div id="form" novalidate>
+					
+					<div class="form-group">
 
-	<div id="navbar-nav" class="collapse navbar-collapse">
-		<ul class="navbar-nav ml-auto">
-			
-			<li class="nav-item">
-				<a href="home.html" class="nav-link text-center mx-2 border-radius">Home</a>
-			</li>
+						<label for="username">Name: (required)</label>
+						<input id="username" class="form-control" type="text" placeholder="Enter Your Name Here" required>
+						<div class="invalid-tooltip">
+				        	Please enter your name.
+				        </div>
 
-			<li class="nav-item">
-				<a href="blogs.html" class="nav-link text-center mx-2 border-radius">Blogs</a>
-			</li>
-			
-			<li class="nav-item">
-				<a class="nav-link text-center mx-2 border-radius">Travel Guide</a>
-			</li>
+					</div> <!-- end from group -->
 
-			<li class="nav-item">
-				<a href="contact.html" class="nav-link text-center active mx-2 border-radius">Contact Us</a>
-			</li>
+					<div class="form-group">
 
-		</ul>				
-	</div> <!-- end navbar items -->
+						<label for="email">Email: (required)</label>
+						<input id="email" class="form-control" type="email" placeholder="Enter Your Email Here" required>
+						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+						<div class="invalid-tooltip">
+				        	Please enter a valid e-mail address.
+				        </div>
 
-</nav> <!-- end navbar -->
+					</div> <!-- end from group -->
 
-<div class="row">
-			
-	<header class="col-12">
-		<h2 class="text-center py-3">Send us your thoughts!</h2>	
-	</header>
+					<div class="form-group">
 
-	<div class="col-12 col-md-6 mt-3 google-map">
-		
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71467.49955578384!2d-126.17613749741794!3d-73.0142877340321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb09dff882a7809e1%3A0xb08d0a385dc8c7c7!2sAntarctica!5e0!3m2!1sen!2sph!4v1540276805918" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+						<label for="subject">Subject:</label>
+						<input id="subject" class="form-control" type="text" placeholder="Enter Subject Here">
 
-	</div> <!-- end google map --> 
+					</div> <!-- end from group -->
 
-	<div class="col-12 col-md-6">
-		
-		<div id="form">
-			
-			<div class="form-group">
+					<div class="form-group">
 
-				<label for="username">Name: (required)</label>
-				<input id="username" class="form-control" type="text" placeholder="Enter Your Name Here">
+						<label for="message">Message:</label>
+						<textarea id="message" class="form-control" placeholder="Enter Your Message Here" required></textarea>
+						<div class="invalid-tooltip">
+				        	Please enter your message.
+				        </div>
 
-			</div> <!-- end from group -->
+					</div> <!-- end from group -->
 
-			<div class="form-group">
+					<button type="submit" class="btn btn-block btn-outline-success">Submit</button>
 
-				<label for="email">Email: (required)</label>
-				<input id="email" class="form-control" type="email" placeholder="Enter Your Email Here">
+				</div>
 
-			</div> <!-- end from group -->
+			</div> <!-- end form column -->
 
-			<div class="form-group">
+			<div class="col-12 col-md-7 mt-3 google-map">
 
-				<label for="subject">Subject:</label>
-				<input id="subject" class="form-control" type="text" placeholder="Enter Subject Here">
+				<div class="row">
 
-			</div> <!-- end from group -->
+					<div class="col-1">
+						<h2><i class="fas fa-location-arrow mr-3"></i></h2>
+					</div>
+					<div class="col-11">
+						<h5>Caswynn Building, 134 Timog Ave, Diliman, Quezon City, Metro Manila</h5>
+					</div>
+						
+					<div class="col-1">
+						<h2><i class="fab fa-facebook-f mr-3"></i></h2>
+					</div>
+					<div class="col-11">
+						<h5>facebook.com/iamjohnjerome</h5>
+					</div>
 
-			<div class="form-group">
+					<div class="col-1">
+						<h2><i class="fas fa-envelope"></i></h2>
+					</div>
+					<div class="col-11">
+						<h5>johnjeromeangeles@gmail.com</h5>
+					</div>
 
-				<label for="message">Message:</label>
-				<textarea id="message" class="form-control" placeholder="Enter Your Message Here"></textarea>
+					<div class="col-1">
+						<h2><i class="fas fa-phone"></i></h2>
+					</div>
+					<div class="col-11">
+						<h5>+63-906-563-5409</h5>
+					</div>
 
-			</div> <!-- end from group -->
+				</div>
 
-			<button class="btn btn-block btn-outline-success">Submit</button>
+				
+				
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.4101322936895!2d121.04148384989611!3d14.632645089731907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7afe6a39331%3A0xd367e6dc5e274032!2sCaswynn+Building%2C+134+Timog+Ave%2C+Diliman%2C+Quezon+City%2C+Metro+Manila!5e0!3m2!1sen!2sph!4v1540521593683" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-		</div>
+			</div> <!-- end google map --> 
 
-	</div> <!-- end form column -->
+		</div> <!-- end row -->
 
-</div> <!-- end row -->
+		<div class="row subfooter pb-3">
+				
+				<div class="col-12 col-lg-8 pt-3">
 
+					<div class="container-fluid">
+
+					</div>
+
+					<small><strong>For Educational and Informational Purposes Only.</strong> The information contained in this website, blog, guest blogs, e-mails, videos, programs, services and/or products is for educational and informational purposes only. </small>
+				</div>
+
+				<div class="col-12 col-lg-4 social-links">
+					<h4 class="mt-3 ml-3">Follow us at:</h4>
+					<a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+					<a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+					<a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+				</div>
+
+			</div>	<!-- end subfooter -->
+
+	</div> <!-- end container fluid -->
 
 
 

@@ -7,13 +7,13 @@
 
 	<meta http-equiv="X-UA-Compatible" content="IE-Edge">
 
-	<title>Capstone 1 | Home Page</title>	 
+	<title>TideHunter | Blogs</title>	 
 
 	<!-- FontAwesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
 	<!-- Google fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Patua+One|Raleway" rel="stylesheet">
 
 	<!-- bootstrap CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -29,7 +29,7 @@
 
 	<nav id="navbar" class="navbar navbar-expand-lg navbar-dark dark-bg sticky-top">
 			
-		<a class="navbar-brand" href="home.html"><img class="logo" src="assets/images/logo.png">TideHunter</a>
+		<a class="navbar-brand pr-3 py-0" href="home.html"><img class="logo" src="assets/images/logo.png">TideHunter</a>
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav">
 			<span class="navbar-toggler-icon"></span>
@@ -47,7 +47,7 @@
 				</li>
 				
 				<li class="nav-item">
-					<a class="nav-link text-center mx-2 border-radius">Travel Guide</a>
+					<a href="about.html" class="nav-link text-center mx-2 border-radius">About Us</a>
 				</li>
 
 				<li class="nav-item">
@@ -198,8 +198,6 @@
 		
 		<button id="read-more-3" class="btn btn-outline-secondary mt-3">Continue Reading...</button>
 
-		<img class="back-to-top d-block ml-auto mr-5 mb-5 animated pulse" onclick="topFunction()" src="assets/images/top.png">
-
 		<div class="row subfooter mt-3">
 				
 				<div class="col-12 col-lg-8 pt-3">
@@ -229,6 +227,13 @@
 
 	</div> <!-- end footer -->
 
+	<div id="buttoncontainer" onclick="topFunction()">
+		<img id="back-to-top" class="back-to-top" src="assets/images/top.png">
+		<p>Back to top</p>
+	</div>
+	
+
+
 
 <!-- jquery first then popper then bootstrap js -->
 <script src="assets/js/jquery-3.3.1.min.js"></script>
@@ -241,6 +246,15 @@
 <!-- read more functions -->
 
 <script type="text/javascript">
+
+	$(window).scroll(function() {
+	   var t=$(window).scrollTop();
+	   if (t>1000) {
+	        $('#buttoncontainer').show()
+	   } else {
+	   		$('#buttoncontainer').hide()
+	   }
+	});
 
 	$("#read-more-1").click(function() {
 		if ($("#read-more-1").text() == 'Continue Reading...'){

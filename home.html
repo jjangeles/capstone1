@@ -7,13 +7,13 @@
 
 	<meta http-equiv="X-UA-Compatible" content="IE-Edge">
 
-	<title>Capstone 1 | Home Page</title>	 
+	<title>TideHunter | Home</title>	 
 
 	<!-- FontAwesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
 	<!-- Google fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Patua+One|Raleway" rel="stylesheet">
 
 	<!-- bootstrap CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -24,12 +24,16 @@
 	<!-- external CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-</head>
-<body id="home" onload="showManila()">
+</head>	
+<body id="home" onload="loadPage()">
+
+	<div id="load">
+		<img id="loading-gif" src="assets/images/loading.gif">
+	</div> <!-- end load -->
 
 	<nav id="navbar" class="navbar navbar-expand-lg navbar-dark dark-bg sticky-top">
 			
-		<a class="navbar-brand" href="home.html"><img class="logo" src="assets/images/logo.png">TideHunter</a>
+		<a class="navbar-brand pr-3 py-0" href="home.html"><img class="logo" src="assets/images/logo.png">TideHunter</a>
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav">
 			<span class="navbar-toggler-icon"></span>
@@ -47,7 +51,7 @@
 				</li>
 				
 				<li class="nav-item">
-					<a class="nav-link text-center mx-2 border-radius">Travel Guide</a>
+					<a href="about.html" class="nav-link text-center mx-2 border-radius">About Us</a>
 				</li>
 
 				<li class="nav-item">
@@ -61,7 +65,7 @@
 
 	<div class="container-fluid mt-3">
 
-		<div class="row main mt-1">
+		<div id="main-row" class="row main mt-1">
 			
 			<div class="col-12 col-lg-8 pl-3 pr-0">
 				
@@ -166,54 +170,7 @@
 				<div class="surfingwaves">powered by <a class="surfingwaves2" href="http://www.surfing-waves.com" rel="noopener" target="_blank">Surfing Waves</a></div> 
 					<!-- end sw-rss-feed code http://www.surfing-waves.com/feed.htm -->
 
-			</div> <!-- end desktop rss feed -->
-
-			<div class="col-12 col-md-6 col-lg-4 rss-mobile">
-				
-				<!-- start sw-rss-feed code --> 
-				<script type="text/javascript"> 
-				 
-					rssfeed_url = new Array(); 
-					rssfeed_url[0]="http://www.surfing-waves.com/newsrss.xml";  
-					rssfeed_frame_width="329"; 
-					rssfeed_frame_height="400"; 
-					rssfeed_scroll="on"; 
-					rssfeed_scroll_step="3"; 
-					rssfeed_scroll_bar="off"; 
-					rssfeed_target="_blank"; 
-					rssfeed_font_size="13"; 
-					rssfeed_font_face="Arial"; 
-					rssfeed_border="on"; 
-					rssfeed_css_url=""; 
-					rssfeed_title="on"; 
-					rssfeed_title_name="Surfing News Feed"; 
-					rssfeed_title_bgcolor="#000"; 
-					rssfeed_title_color="#fff"; 
-					rssfeed_title_bgimage=""; 
-					rssfeed_footer="off"; 
-					rssfeed_footer_name="rss feed"; 
-					rssfeed_footer_bgcolor="#fff"; 
-					rssfeed_footer_color="#333"; 
-					rssfeed_footer_bgimage=""; 
-					rssfeed_item_title_length="50"; 
-					rssfeed_item_title_color="#666"; 
-					rssfeed_item_bgcolor="#fff"; 
-					rssfeed_item_bgimage=""; 
-					rssfeed_item_border_bottom="on"; 
-					rssfeed_item_source_icon="off"; 
-					rssfeed_item_date="off"; 
-					rssfeed_item_description="on"; 
-					rssfeed_item_description_length="120"; 
-					rssfeed_item_description_color="#666"; 
-					rssfeed_item_description_link_color="#333"; 
-					rssfeed_item_description_tag="off"; 
-					rssfeed_no_items="0"; 
-					rssfeed_cache = "1ca74a70ac3cac7d8f4fa8df7c1f99a9"; 
-					
-				</script> 
-				<script type="text/javascript" src="https://feed.surfing-waves.com/js/rss-feed.js"></script>
-
-			</div> <!-- mobile rss feed -->
+			</div> <!-- end rss feed -->
 
 			<div class="col-12 col-md-12 col-lg-12 mt-5">
 				<h2 class="text-center">7 Day Weather forecast</h2>
@@ -235,6 +192,7 @@
 			</div> <!-- end select location -->
 			
 			<!-- weather widget -->
+				
 			<div id="weather-manila" class="col-12 col-md-12 col-lg-12 mt-3 weather-loc">
 
 				<a class="weatherwidget-io" href="https://forecast7.com/en/14d60120d98/manila/" data-label_1="MANILA" data-label_2="WEATHER" data-theme="dark" data-basecolor="#0E0E1E" data-suncolor="#E76F51" >MANILA WEATHER</a>
@@ -278,6 +236,7 @@
 				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 				</script>
 			</div> <!-- end siargao -->
+			
 
 			<div class="col-12 col-lg-12 mt-3">
 				<h2>The surfing season is here!</h2> 
@@ -288,7 +247,7 @@
 
 			<!-- video carousel -->
 
-			<div id="carousel-controls1" class="carousel slide col-lg-12" data-ride="carousel" data-interval="false">
+			<div id="carousel-controls1" class="carousel slide col-12 col-lg-12" data-ride="carousel" data-interval="false">
 
 				<div class="carousel-inner-vid">
 
@@ -296,19 +255,19 @@
 							<div class="row vid-row">
 
 								<div class="col-md-4 col-lg-2 offset-md-2 offset-lg-2 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/k_Vd9SYg4wI" data-target="#modal-1">
-									<img class="d-block w-100" src="assets/images/catch.jpg">
+									<img class="d-block w-100 img-fluid" src="assets/images/catch.jpg">
 								</div>
 								
 								<div class="col-md-4 col-lg-2 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/KCLWvAcPcPk" data-target="#modal-1"">
-									<img class="d-block w-100" src="assets/images/take-off.jpg">
+									<img class="d-block w-100 img-fluid" src="assets/images/take-off.jpg">
 								</div>
 
 								<div class="col-md-4 col-lg-2 offset-md-2 offset-lg-0 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/ipmlL7Hjhdg" data-target="#modal-1"">
-									<img class="d-block w-100" src="assets/images/speed.jpg">
+									<img class="d-block w-100 img-fluid" src="assets/images/speed.jpg">
 								</div>
 
 								<div class="col-md-4 col-lg-2 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/3M7Ko0ZxIh0" data-target="#modal-1"">
-									<img class="d-block w-100" src="assets/images/paddle.jpg">
+									<img class="d-block w-100 img-fluid" src="assets/images/paddle.jpg">
 								</div>
 
 							</div> <!-- end carousel row -->
@@ -421,7 +380,50 @@
 
 			</div> <!-- end modal -->
 
-			<div class="row subfooter mt-3 mx-0">
+			<div class="col-12 col-lg-12 mt-3">
+
+				<h2>Surfboards and Surfing Accessories!</h2> 
+				<p class="lead"><strong>Surfing is not a complicated sport. Unlike many other water sports, the truth is that surfing only requires a surfboard and someone willing to glide over the ocean waves.</strong></p>
+
+				<p>The essential surfing equipment for beginners is comprised of a surfboard, fins, leash, wax, and wetsuit. That's all you need to get into the sport of kings. But as you progress and improve your surfing skills, you'll want more than just the essentials. A bag to protect your favorite stick, skin and ear protection and surf gadgets will also be useful to your surfing life.</p>
+
+				<p>Here are some cool surfing brands you can check: </p>
+
+			</div>
+
+			<div class="col-6 col-md-3 brands">
+				<a href="https://www.quiksilver.com.ph/" target="_blank"><img src="assets/images/brands/quiksilver.png" alt="quiksilver"></a>
+			</div>
+
+			<div class="col-6 col-md-3 brands">
+				<a href="https://eu.billabong.com/" target="_blank"><img src="assets/images/brands/billabong.png" alt="billabong"></a>
+			</div>
+
+			<div class="col-6 col-md-3 brands">
+				<a href="https://www.rusty.com/" target="_blank"><img src="assets/images/brands/rusty.png" alt="rusty"></a>
+			</div>
+
+			<div class="col-6 col-md-3 brands">
+				<a href="https://www.reef.com/" target="_blank"><img src="assets/images/brands/reef.png" alt="reef"></a>
+			</div>
+
+			<div class="col-6 col-md-3 brands">
+				<a href="https://www.ripcurl.asia/en/" target="_blank"><img src="assets/images/brands/ripcurl.png" alt="ripcurl"></a>
+			</div>
+
+			<div class="col-6 col-md-3 brands">
+				<a href="http://www.oneill.com/eu/en/home" target="_blank"><img src="assets/images/brands/oneill.png" alt="oneill"></a>
+			</div>
+
+			<div class="col-6 col-md-3 brands">
+				<a href="https://www.lightningbolt-usa.com/en" target="_blank"><img src="assets/images/brands/lightningbolt.png" alt="lightningbolt"></a>
+			</div>
+
+			<div class="col-6 col-md-3 brands">
+				<a href="https://www.hurley.com/ph/en_gb/c/hurley?ref=https%253A%252F%252Fwww.google.com.ph%252F" target="_blank"><img src="assets/images/brands/hurley.png" alt="hurley"></a>
+			</div>
+
+			<div class="row subfooter mt-3 pb-3 mx-0">
 				
 				<div class="col-12 col-lg-8 pt-3 subleft">
 
@@ -490,7 +492,8 @@
 </script>
 
 <script type="text/javascript">
-	function showManila(){
+
+	function loadPage(){
 
 		var elems = document.getElementsByClassName('weather-loc');
 		for (var i=0;i<elems.length;i+=1){
@@ -502,7 +505,20 @@
 	    $(".dropdown-menu button").removeClass("active");
 	    $("#manila").addClass("active");
 
-	    $("#weather-drop").text = "Manila";
+	    window.setTimeout(function (){$("#load").css("display", "none"); }, 2000);
+	}
+
+	function showManila(){
+
+		var elems = document.getElementsByClassName('weather-loc');
+		for (var i=0;i<elems.length;i+=1){
+		  	elems[i].style.display = 'none';
+		}
+
+	  	document.getElementById('weather-manila').style.display ='block';
+
+	    $(".dropdown-menu button").removeClass("active");
+	    $("#manila").addClass("active");
 	    
 	}
 
@@ -518,7 +534,6 @@
 	  	$(".dropdown-menu button").removeClass("active");
 	    $("#real").addClass("active");
 
-	    document.getElementById('weather-drop').text = 'Manila';
 	}
 
 	function showBaler(){
