@@ -126,10 +126,6 @@ html {
 	color: white;
 }
 
-.rss-desktop {
-	/*overflow: hidden;*/
-}
-
 .surfingwaves {
 	text-align: right;
 	width: 100%;
@@ -355,7 +351,7 @@ iframe {
 }
 
 .google-map {
-	height: 40vh;
+	height: 50vh;
 }
 
 .form-group.required .control-label:after {
@@ -405,6 +401,24 @@ iframe {
 	position: absolute;
 	bottom: 5%;
 }
+
+.about-us {
+	background-color: #0E0E1E;
+}
+
+.about-us h1 {
+	color: white;
+}
+
+.about-us img {
+	filter: grayscale(100%);
+}
+
+.about-us img:hover {
+	filter: grayscale(0);
+}
+
+
 
 /*--------------------------------Desktop------------------------*/
 
