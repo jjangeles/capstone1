@@ -141,7 +141,7 @@ html {
 }
 
 #carousel-controls1 {
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 #carousel-controls2 {
@@ -161,6 +161,13 @@ html {
   width: 100%;
   margin: auto;
   min-height:initial;
+}
+
+.vid-row img:hover {
+	transform: scale(1.4);
+	position: relative;
+	z-index: 10;
+	cursor: pointer;
 }
 
 .vid-row {
@@ -385,8 +392,8 @@ iframe {
 }
 
 #about .subfooter {
-	position: relative;
-	top: 100px;
+	position: absolute;
+	bottom: -110px;
 }
 
 #about #navbar {
@@ -404,6 +411,7 @@ iframe {
 
 .about-us {
 	background-color: #0E0E1E;
+	height: 110vh;
 }
 
 .about-us h1 {
