@@ -43,7 +43,7 @@
 		</button>
 
 		<div id="navbar-nav" class="collapse navbar-collapse">
-			<ul class="navbar-nav ml-auto">
+			<ul class="nav ml-auto">
 				
 				<li class="nav-item">
 					<a href="home.html" class="nav-link text-center active mx-2 border-radius">Home</a>
@@ -508,7 +508,7 @@
 	    $(".dropdown-menu button").removeClass("active");
 	    $("#manila").addClass("active");
 
-	    window.setTimeout(function (){$("#load").css("display", "none"); }, 2000);
+	    window.setTimeout(function (){$("#load").css("display", "none"); }, 100);
 	}
 
 	function showManila(){
@@ -518,10 +518,10 @@
 		  	elems[i].style.display = 'none';
 		}
 
-	  	document.getElementById('weather-manila').style.display ='block';
-
-	    $(".dropdown-menu button").removeClass("active");
+	  	$(".dropdown-menu button").removeClass("active");
+	  	$("#weather-manila").addClass("show-weather");
 	    $("#manila").addClass("active");
+	    document.getElementById('weather-manila').style.display ='block';
 	    
 	}
 
@@ -532,10 +532,10 @@
 		  	elems[i].style.display = 'none';
 		}
 
-	  	document.getElementById('weather-real').style.display ='block';
-
 	  	$(".dropdown-menu button").removeClass("active");
+	  	$("#weather-real").addClass("show-weather");
 	    $("#real").addClass("active");
+	    document.getElementById('weather-real').style.display ='block';
 
 	}
 
@@ -546,10 +546,10 @@
 		  	elems[i].style.display = 'none';
 		}
 
-	  	document.getElementById('weather-baler').style.display ='block';
-
 	  	$(".dropdown-menu button").removeClass("active");
+	  	$("#weather-baler").addClass("show-weather");
 	    $("#baler").addClass("active");
+	    document.getElementById('weather-baler').style.display ='block';
 	}
 
 	function showZambales(){
@@ -559,10 +559,10 @@
 		  	elems[i].style.display = 'none';
 		}
 
-	  	document.getElementById('weather-zambales').style.display ='block';
-
 	  	$(".dropdown-menu button").removeClass("active");
+	  	$("#weather-zambales").addClass("show-weather");
 	    $("#zambales").addClass("active");
+	    document.getElementById('weather-zambales').style.display ='block';
 	}
 
 	function showLaUnion(){
@@ -572,10 +572,10 @@
 		  	elems[i].style.display = 'none';
 		}
 
-	  	document.getElementById('weather-launion').style.display ='block';
-
 	  	$(".dropdown-menu button").removeClass("active");
+	  	$("#weather-launion").addClass("show-weather");
 	    $("#la-union").addClass("active");
+	    document.getElementById('weather-launion').style.display ='block';
 	}
 
 	function showSiargao(){
@@ -585,11 +585,12 @@
 		  	elems[i].style.display = 'none';
 		}
 
-	  	document.getElementById('weather-siargao').style.display ='block';
-
 	  	$(".dropdown-menu button").removeClass("active");
+	  	$("#weather-siargao").addClass("show-weather");
 	    $("#siargao").addClass("active");
+	    document.getElementById('weather-siargao').style.display ='block';
 	}
+
 </script>
 
 </body>

@@ -350,6 +350,14 @@ iframe {
     animation-iteration-count: infinite;
 }
 
+.show-weather {
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration:3s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+}
+
 /*------------------------------Contact--------------------------*/
 
 #message {
