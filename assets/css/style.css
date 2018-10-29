@@ -402,6 +402,8 @@ iframe {
 #about .subfooter {
 	position: absolute;
 	bottom: -110px;
+	margin: 0;
+	left: 0;
 }
 
 #about #navbar {
@@ -432,6 +434,11 @@ iframe {
 
 .about-us img:hover {
 	filter: grayscale(0);
+}
+
+.about-us .my-images {
+	position: relative;
+	top: -20vh;
 }
 
 
