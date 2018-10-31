@@ -43,7 +43,10 @@
 <body id="home" onload="loadPage()">
 
 	<div id="load">
-		<img id="loading-gif" src="assets/images/loading.gif">
+		<div class="circle">
+			<img id="loading-logo" src="assets/images/loading-logo.png">
+			<div class="wave"></div>
+		</div>
 	</div> <!-- end load -->
 
 	<nav id="navbar" class="navbar navbar-expand-lg navbar-dark dark-bg sticky-top">
@@ -67,6 +70,10 @@
 				
 				<li class="nav-item">
 					<a href="about.html" class="nav-link text-center mx-2 border-radius">About Us</a>
+				</li>
+
+				<li class="nav-item">
+					<a href="gallery.html" class="nav-link text-center mx-2 border-radius">Gallery<span class="badge badge-danger">BETA</span></a>
 				</li>
 
 				<li class="nav-item">
@@ -273,15 +280,15 @@
 									<img class="d-block w-100 img-fluid" src="assets/images/catch.jpg">
 								</div>
 								
-								<div class="col-md-4 col-lg-2 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/KCLWvAcPcPk" data-target="#modal-1"">
+								<div class="col-md-4 col-lg-2 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/KCLWvAcPcPk" data-target="#modal-1">
 									<img class="d-block w-100 img-fluid" src="assets/images/take-off.jpg">
 								</div>
 
-								<div class="col-md-4 col-lg-2 offset-md-2 offset-lg-0 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/ipmlL7Hjhdg" data-target="#modal-1"">
+								<div class="col-md-4 col-lg-2 offset-md-2 offset-lg-0 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/ipmlL7Hjhdg" data-target="#modal-1">
 									<img class="d-block w-100 img-fluid" src="assets/images/speed.jpg">
 								</div>
 
-								<div class="col-md-4 col-lg-2 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/3M7Ko0ZxIh0" data-target="#modal-1"">
+								<div class="col-md-4 col-lg-2 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/3M7Ko0ZxIh0" data-target="#modal-1">
 									<img class="d-block w-100 img-fluid" src="assets/images/paddle.jpg">
 								</div>
 
@@ -292,7 +299,7 @@
 						<div class="carousel-item">
 							<div class="row vid-row">
 								
-								<div class="col-md-4 col-lg-2 offset-md-2 offset-lg-2 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/mKtbmZvHCm4" data-target="#modal-1"">
+								<div class="col-md-4 col-lg-2 offset-md-2 offset-lg-2 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/mKtbmZvHCm4" data-target="#modal-1">
 									<img class="d-block w-100" src="assets/images/draw.jpg">
 								</div>
 								
@@ -300,11 +307,11 @@
 									<img class="d-block w-100" src="assets/images/etiquette.jpg">
 								</div>
 
-								<div class="col-md-4 col-lg-2 offset-md-2 offset-lg-0 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/k_Vd9SYg4wI" data-target="#modal-1"">
+								<div class="col-md-4 col-lg-2 offset-md-2 offset-lg-0 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/k_Vd9SYg4wI" data-target="#modal-1">
 									<img class="d-block w-100" src="assets/images/catch.jpg">
 								</div>
 
-								<div class="col-md-4 col-lg-2 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/KCLWvAcPcPk" data-target="#modal-1"">
+								<div class="col-md-4 col-lg-2 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/KCLWvAcPcPk" data-target="#modal-1">
 									<img class="d-block w-100" src="assets/images/take-off.jpg">
 								</div>
 
@@ -384,7 +391,7 @@
 
 			        		<!-- 16:9 aspect ratio -->
 							<div class="embed-responsive embed-responsive-16by9">
-			  					<iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always">></iframe>
+			  					<iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always"></iframe>
 							</div>
 
 				        </div> <!-- end modal body -->
@@ -475,30 +482,23 @@
 
 	$(document).ready(function() {
 
-	// Gets the video src from the data-src on each button
+		var $videoSrc;  
+		$('.video-btn').click(function() {
+		    $videoSrc = $(this).data( "src" );
+		});
+		console.log($videoSrc);
+		  
+		// when the modal is opened autoplay it  
+		$('#modal-1').on('show.bs.modal', function (e) {
+			$("#video").attr('src',$videoSrc + "?rel=0&autoplay=1" ); 
+		})
+		  
+		$('#modal-1').on('hide.bs.modal', function (e) {
+		    $("#video").attr('src',$videoSrc); 
+		}) 
 
-	var $videoSrc;  
-	$('.video-btn').click(function() {
-	    $videoSrc = $(this).data( "src" );
 	});
-	console.log($videoSrc);
-	  
-	// when the modal is opened autoplay it  
-	$('#modal-1').on('shown.bs.modal', function (e) {
-	    
-	// set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
-	$("#video").attr('src',$videoSrc + "?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1" ); 
-	})
-	  
-	  
-	// stop playing the youtube video when I close the modal
-	$('#modal-1').on('hide.bs.modal', function (e) {
-	    // a poor man's stop video
-	    $("#video").attr('src',$videoSrc); 
-	}) 
 
-	// document ready  
-	});
 </script>
 
 <script type="text/javascript">
