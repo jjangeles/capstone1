@@ -151,6 +151,7 @@
 			    </div>
 	      		<div class="modal-footer">
 			        <p id="caption" class="mr-auto"></p>
+			        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 			    </div>
 	    	</div>
 	  	</div>
@@ -189,14 +190,7 @@
 	// waves parallax
 	$(window).scroll(function(){ 
 		var scroll = $(this).scrollTop();
-
-		// $("#pic1").css("transform", 'translate(0px,-'+scroll+'%)');
-		// $("#pic2").css("transform", 'translate(0px,-'+scroll/6+'%)');
-		// $("#pic3").css("transform", 'translate(0px,-'+scroll/3+'%)');
-		// $("#pic4").css("transform", 'translate(0px,-'+scroll/7+'%)');
-		// $("#pic5").css("transform", 'translate(0px,-'+scroll/5+'%)');
 		$(".wave-gal").css("transform", 'translate(0px,'+scroll/13+'%)');
-
 	});
 
 </script>

@@ -156,7 +156,7 @@ html {
 	top: -5px;
 }
 
-.navbar-nav .active {
+.navbar-dark .navbar-nav .nav-link.active {
 	background-color: #E76F51;
 	color: black;
 }
@@ -433,7 +433,6 @@ iframe {
 
 #about {
 	height: 200vh;
-	/*overflow: hidden;*/
 }
 
 #about .mission {
@@ -721,6 +720,13 @@ iframe {
     margin: 5px;
 }
 
+#modal button {
+	display: inline-block;
+	margin: 0;
+	height: 30px;
+	padding-top: 0;
+}
+
 #modal-dialog {
 	display: inline-block;
     width: auto;
@@ -795,7 +801,7 @@ line {
 
 .wave4:before,
 .wave4:after {
-	left: 80%;
+	left: 85%;
 	animation: animate 3s linear infinite;
 }
 
@@ -819,7 +825,7 @@ line {
 
 .wave8:before,
 .wave8:after {
-	left: 180%;
+	left: 185%;
 	animation: animate 3s linear infinite;
 }
 
@@ -888,6 +894,10 @@ line {
 
 	.load {
 		display: none;
+	}
+
+	.nav-item {
+		margin-top: 5px;
 	}
 
 	.carousel-inner {
@@ -1015,6 +1025,10 @@ line {
 
 	.load {
 		display: none;
+	}
+
+	.nav-item {
+		margin-top: 5px;
 	}
 
 	#navbar .navbar-brand {
