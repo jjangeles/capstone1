@@ -304,8 +304,8 @@ iframe {
 	position: relative;
 }
 
-.subfooter [class*="col-"] {
-	min-height: 20vh;
+#contact .subfooter [class*="col-"] {
+	min-height: 22vh;
 	width: 100%;
 	background-color: #0A213A;
 	color: white;
